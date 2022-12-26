@@ -12,9 +12,9 @@ Console.WriteLine(result);
 
 string Coordinates(int qurt)
 {
-    if (quarter == 1) return "xc > 0, yc > 0";
-    if (quarter == 2) return "xc < 0, yc > 0";
-    if (quarter == 3) return "xc < 0, yc < 0";
-    if (quarter == 4) return "xc > 0, yc < 0";
+    if (quarter == 1) return "x > 0, y > 0";
+    if (quarter == 2) return "x < 0, y > 0";
+    if (quarter == 3) return "x < 0, y < 0";
+    if (quarter == 4) return "x > 0, y < 0";
     return "Err";
 }
