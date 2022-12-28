@@ -4,15 +4,16 @@
 
 Console.Write("Введите число (N) для выдачи таблицы квадратов чисел от 1 до N: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int i = 1; 
 
-while (i <= number)
-{
-    Console.WriteLine($"{i} -> {Square(i)}");
-    i++;
-}
+if (number > 0) TableSquare(number);
+else System.Console.WriteLine("Введено не натуральное число.");
 
-int Square(int num)
+void TableSquare(int num)
 {
-    return  num * num;
+    int count = 1;
+    while (count <= number)
+    {
+        Console.WriteLine($"{count, 5}  {Math.Pow(count, 2), 5}");
+        count++;
+    }
 }
