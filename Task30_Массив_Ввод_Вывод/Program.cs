@@ -3,20 +3,21 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 int[] array = new int[8];
-ArrayAddRandomNum();
-for (int i = 0; i < array.Length; i++)
-{
-   Console.WriteLine(array[i]); 
-}
+FillArray(array);
+PrintArray(array);
 
-
-void ArrayAddRandomNum()
+void FillArray(int[] arr)
 {
-    Random rnd = new Random();
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[i] = rnd.Next(0, 2);
-//        Console.WriteLine(array[i]); 
+        arr[i] = new Random().Next(0, 2);
     }
 }
 
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.WriteLine(arr[i]);
+    }
+}
