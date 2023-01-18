@@ -12,9 +12,9 @@ Console.WriteLine($"Произведение чисел от 1 до {number} -> 
 int MultiplyNumber(int count)
 {
     int num = 1;
-    for (int i = 1; i < count; i++)
+    for (int i = 1; i <= count; i++)
     {
-        num = num * (i+1);
+        num *= i;
     }
     return num;
 }
