@@ -7,25 +7,51 @@
 // сумма положительных чисел равна   29, 
 // сумма отрицательных равна        -20.
 
-int[] array = CreateArray(12,-9,9);
-PrintArray(array);
-int[] CreateArray(int size, int rndBegin, int rndEnd)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(rndBegin, rndEnd);
+        arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
 }
+
 void PrintArray(int[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i != 0) Console.Write(", ");
-        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(arr[i] + ",");
+        else Console.Write(arr[i]);
     }
     Console.WriteLine("]");
 }
+
+int GetSumPositiveElem(int[] arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0) sum += arr[i];
+    }
+    return sum;
+}
+
+int GetSumNegativeElem(int[] arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < 0) sum += arr[i];
+    }
+    return sum;
+}
+
+int[] array = CreateArrayRndInt(12, -9, 9);
+PrintArray(array);
+int sumPositive = GetSumPositiveElem(array);
+int sumNegative = GetSumNegativeElem(array);
+Console.WriteLine($"Сумма положительных элементов = {sumPositive}");
+Console.WriteLine($"Сумма отрицательных элементов = {sumNegative}");
