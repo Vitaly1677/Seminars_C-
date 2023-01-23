@@ -8,12 +8,12 @@
 // [10, 11, 12, 13, 14] -> 5
 
 
-int[] array = CreateArrayRndInt(5, 1, 200);
+int[] array = CreateArrayRndInt(123, 1, 200);
 PrintArray(array);
 Console.Write(" -> ");
-Console.WriteLine(FindInArray(array, 10, 99));
+Console.WriteLine(FindIntervalInArray(array, 10, 99));
 
-int FindInArray(int[] arr, int min, int max)
+int FindIntervalInArray(int[] arr, int min, int max)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
