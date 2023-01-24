@@ -6,14 +6,14 @@
 
 int[] array = CreateArrayRndInt(5, 1, 10);
 PrintArray(array);
-ArrayRevers(array);
+ReverseArray(array);
 PrintArray(array);
-ArrayReversVersion2(array);
+ReverseArrayVersion2(array);
 PrintArray(array);
 Array.Reverse(array); // Встроенная функция
 PrintArray(array);
 
-void ArrayRevers(int[] arr)
+void ReverseArray(int[] arr)
 {
     for (int i = 0; i < arr.Length / 2; i++)
     {
@@ -23,7 +23,7 @@ void ArrayRevers(int[] arr)
     }
 }
 
-void ArrayReversVersion2(int[] arr)
+void ReverseArrayVersion2(int[] arr)
 {
     int index1=0;
     int index2=arr.Length-1;
