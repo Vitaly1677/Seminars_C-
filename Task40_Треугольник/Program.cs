@@ -13,8 +13,7 @@ Console.WriteLine(IsExistTriangle(a, b, c) ? "Треугольник может 
 
 bool IsExistTriangle(int num1, int num2, int num3)
 {
-    if (num1 < num2 + num3 && num2 < num1 + num3 && num3 < num1 + num2) return true;
-    else return false;
+    return num1 < num2 + num3 && num2 < num1 + num3 && num3 < num1 + num2;
 }
 
 int ReadIntNumder(int index)
