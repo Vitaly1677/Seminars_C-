@@ -30,6 +30,12 @@ int ReadIntNumder(int index)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+// Проверка int на положителные
+bool CheckPositivelIntNumber(int num)
+{
+    return num > 0;
+}
+
 // Заполнить массив Int случайными числами
 void FillArray(int[] arr)
 {
