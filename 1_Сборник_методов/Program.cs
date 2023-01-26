@@ -23,6 +23,17 @@ int[] CreateArrayRndInt(int size, int min, int max)
     }
     return arr;
 }
+
+// Заполнить массив Int случайными числами
+void FillArray(int[] arr,int min, int max)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.Next(min, max);
+    }
+}
+
 //Читает значения из терминала
 int ReadIntNumder(int index) 
 {
@@ -34,15 +45,6 @@ int ReadIntNumder(int index)
 bool CheckPositivelIntNumber(int num)
 {
     return num > 0;
-}
-
-// Заполнить массив Int случайными числами
-void FillArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = new Random().Next(0, 2);
-    }
 }
 
 // Разворот массива
