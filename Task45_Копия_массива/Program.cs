@@ -5,9 +5,11 @@ int[] arrayOrig = new int[10]; // Исходный массив
 int[] arrayCopy = new int[10]; // Массив для копирования
 
 FillArray(arrayOrig, 10, 100);
+
 PrintArray(arrayOrig);
 PrintArray(arrayCopy);
 CopyArrayToArray(arrayOrig, arrayCopy);
+PrintArray(arrayOrig);
 PrintArray(arrayCopy);
 
 
