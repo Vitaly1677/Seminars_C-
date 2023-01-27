@@ -12,7 +12,6 @@ CopyArrayToArray(arrayOrig, arrayCopy);
 PrintArray(arrayOrig);
 PrintArray(arrayCopy);
 
-
 void FillArray(int[] arr,int min, int max)
 {
     Random rnd = new Random();
