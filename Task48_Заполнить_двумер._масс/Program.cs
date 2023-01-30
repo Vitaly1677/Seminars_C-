@@ -6,10 +6,10 @@
 // 1 2 3 4
 // 2 3 4 5
 
-int[,] array2D = CreateMatrixInt(3, 4);
-PrintArray(array2D);
+int[,] matrixSumIndex = CreateMatrixSumIndex(3, 4);
+PrintArray(matrixSumIndex);
 
-int[,] CreateMatrixInt(int rows, int column)
+int[,] CreateMatrixSumIndex(int rows, int column)
 {
     int[,] matrix = new int[rows, column];
     
